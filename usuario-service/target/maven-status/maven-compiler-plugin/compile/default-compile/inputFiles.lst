@@ -1,0 +1,11 @@
+C:\CURSOS\JAVA\Microservicios\usuario-service\src\main\java\com\usuario\service\configuracion\RestTemplateConfig.java
+C:\CURSOS\JAVA\Microservicios\usuario-service\src\main\java\com\usuario\service\entidades\Usuario.java
+C:\CURSOS\JAVA\Microservicios\usuario-service\src\main\java\com\usuario\service\feignclients\MotoFeignClient.java
+C:\CURSOS\JAVA\Microservicios\usuario-service\src\main\java\com\usuario\service\servicio\UsuarioServiceImpl.java
+C:\CURSOS\JAVA\Microservicios\usuario-service\src\main\java\com\usuario\service\controlador\UsuarioController.java
+C:\CURSOS\JAVA\Microservicios\usuario-service\src\main\java\com\usuario\service\modelos\Moto.java
+C:\CURSOS\JAVA\Microservicios\usuario-service\src\main\java\com\usuario\service\modelos\Auto.java
+C:\CURSOS\JAVA\Microservicios\usuario-service\src\main\java\com\usuario\service\repositorio\UsuarioRepository.java
+C:\CURSOS\JAVA\Microservicios\usuario-service\src\main\java\com\usuario\service\UsuarioServiceApplication.java
+C:\CURSOS\JAVA\Microservicios\usuario-service\src\main\java\com\usuario\service\feignclients\AutoFeignClient.java
+C:\CURSOS\JAVA\Microservicios\usuario-service\src\main\java\com\usuario\service\servicio\UsuarioService.java

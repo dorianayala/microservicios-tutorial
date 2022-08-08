@@ -1,0 +1,10 @@
+com\usuario\service\modelos\Auto.class
+com\usuario\service\feignclients\AutoFeignClient.class
+com\usuario\service\repositorio\UsuarioRepository.class
+com\usuario\service\modelos\Moto.class
+com\usuario\service\servicio\UsuarioServiceImpl.class
+com\usuario\service\configuracion\RestTemplateConfig.class
+com\usuario\service\servicio\UsuarioService.class
+com\usuario\service\UsuarioServiceApplication.class
+com\usuario\service\controlador\UsuarioController.class
+com\usuario\service\entidades\Usuario.class
