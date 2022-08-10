@@ -2,6 +2,7 @@ package com.usuario.service.servicio;
 
 import com.usuario.service.entidades.Usuario;
 import com.usuario.service.feignclients.AutoFeignClient;
+import com.usuario.service.feignclients.MotoFeignClient;
 import com.usuario.service.modelos.Auto;
 import com.usuario.service.modelos.Moto;
 import com.usuario.service.repositorio.UsuarioRepository;
@@ -19,8 +20,14 @@ public class UsuarioServiceImpl implements UsuarioService {
     @Autowired
     private UsuarioRepository usuarioRepository;
 
-//    @Autowired
-//    private AutoFeignClient autoFeignClient;
+    @Autowired
+    private AutoFeignClient autoFeignClient;
+    
+    
+    
+    @Autowired
+    private MotoFeignClient motoFeignClient;
+    
     
     @Override
     public List<Auto> getAutos(Long usuarioId) {
@@ -55,13 +62,13 @@ public class UsuarioServiceImpl implements UsuarioService {
     @Override
     public Auto saveAuto(Long usuarioId, Auto auto) {
         auto.setUsuarioId(usuarioId);
-        Auto nuevoAuto = null; //autoFeignClient.save(auto);
+        Auto nuevoAuto = autoFeignClient.save(auto);
         return nuevoAuto;
     }
 
     public Moto saveMoto(Long usuarioId, Moto moto) {
         moto.setUsuarioId(usuarioId);
-        //Moto nuevoMoto = autoFeignClient.save(moto);
+        Moto nuevoMoto = motoFeignClient.save(moto);
         return moto;
     }
 
