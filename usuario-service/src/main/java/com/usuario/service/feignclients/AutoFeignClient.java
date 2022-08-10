@@ -1,6 +1,7 @@
 package com.usuario.service.feignclients;
 
 import com.usuario.service.modelos.Auto;
+import java.util.List;
 import org.springframework.cloud.openfeign.FeignClient;
 
 
@@ -13,5 +14,6 @@ public interface AutoFeignClient {
     @PostMapping
     public Auto save(@RequestBody Auto auto);
 
-   
+   @GetMapping("/usuario/{usuarioId}")
+    public List<Auto> getAutos(@PathVariable("usuarioId") Long usuarioId);
 }

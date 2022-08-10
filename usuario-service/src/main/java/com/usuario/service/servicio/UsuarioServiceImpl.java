@@ -6,7 +6,9 @@ import com.usuario.service.feignclients.MotoFeignClient;
 import com.usuario.service.modelos.Auto;
 import com.usuario.service.modelos.Moto;
 import com.usuario.service.repositorio.UsuarioRepository;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -66,10 +68,41 @@ public class UsuarioServiceImpl implements UsuarioService {
         return nuevoAuto;
     }
 
+    @Override
     public Moto saveMoto(Long usuarioId, Moto moto) {
         moto.setUsuarioId(usuarioId);
         Moto nuevoMoto = motoFeignClient.save(moto);
-        return moto;
+        return nuevoMoto;
+    }
+    
+    public Map<String,Object> getUsuarioAndVehiculos(Long usuarioId){
+        Map<String,Object> resultado = new HashMap<>();
+        Usuario usuario = usuarioRepository.findById(usuarioId).orElse(null);
+        
+        if(usuario==null){
+            resultado.put("Mensaje", "El usuario no existe");
+            return resultado;
+        }
+        
+        resultado.put("Usuario", usuario);
+        
+        List<Auto> autos = autoFeignClient.getAutos(usuarioId);
+        if(autos.isEmpty()){
+            resultado.put("Autos", "El usuario no tiene autos");
+        }else{
+            resultado.put("Autos", autos);
+        }
+        
+        
+        List<Moto> motos = motoFeignClient.getMotos(usuarioId);
+        if(motos.isEmpty()){
+            resultado.put("Autos", "El usuario no tiene motos");
+        }else{
+            resultado.put("Motos", motos);
+        }
+        
+        
+        return resultado;
     }
 
     public Usuario getUsuarioById(Long id) {

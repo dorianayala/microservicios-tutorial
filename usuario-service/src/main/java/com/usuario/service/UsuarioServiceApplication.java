@@ -2,11 +2,12 @@ package com.usuario.service;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
  
 
 //Habilita al cliente feignClient
-//@EnableFeignClients
+@EnableFeignClients
 @SpringBootApplication
 public class UsuarioServiceApplication {
 

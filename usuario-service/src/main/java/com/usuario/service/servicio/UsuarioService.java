@@ -4,6 +4,7 @@ import com.usuario.service.entidades.Usuario;
 import com.usuario.service.modelos.Auto;
 import com.usuario.service.modelos.Moto;
 import java.util.List;
+import java.util.Map;
 
 public interface UsuarioService {
     
@@ -24,4 +25,6 @@ public interface UsuarioService {
      public Usuario actualizarUsuario(Long id, Usuario usuario);
      
      public void eliminarUsuario(Long id);
+     
+     public Map<String,Object> getUsuarioAndVehiculos(Long usuarioId);
 }
