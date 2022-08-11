@@ -1,3 +1,10 @@
+spring:
+  application:
+    name: usuario-service
+  cloud:
+    config:
+      enabled: true
+      uri: http://localhost:8081
 #server.port=8001
 #spring.application.name=usuario-service
 #
@@ -11,11 +18,3 @@
 #
 #spring.jpa.hibernate.ddl-auto=update
 #logging.level.org.hibernate.SQL=debug
-
-spring:
-  application:
-    name: usuario-service
-  cloud:
-    config:
-      enabled: true
-      uri: http://localhost:8081
