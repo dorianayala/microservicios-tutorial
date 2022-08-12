@@ -9,3 +9,4 @@ com\usuario\service\UsuarioServiceApplication.class
 com\usuario\service\controlador\UsuarioController.class
 com\usuario\service\feignclients\MotoFeignClient.class
 com\usuario\service\entidades\Usuario.class
+.netbeans_automatic_build
